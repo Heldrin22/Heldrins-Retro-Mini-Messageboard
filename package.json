@@ -1,0 +1,31 @@
+{
+  "name": "odinproject_mini_message_board",
+  "version": "1.0.0",
+  "description": "Mini message board web app using Express and EJS",
+  "keywords": [
+    "web",
+    "app",
+    "message",
+    "board"
+  ],
+  "homepage": "https://github.com/Heldrin22/OdinProject_Mini_Message_Board#readme",
+  "bugs": {
+    "url": "https://github.com/Heldrin22/OdinProject_Mini_Message_Board/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heldrin22/OdinProject_Mini_Message_Board.git"
+  },
+  "license": "ISC",
+  "author": "Heldrin Altrion",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

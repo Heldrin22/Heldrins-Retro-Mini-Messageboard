@@ -1,0 +1,131 @@
+/* Styling for the header or "case" of the computer simulation */
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100vw;
+  padding: 0.5rem;
+
+  background-color: rgb(244, 244, 190);
+
+  color: rgb(212, 179, 179);
+}
+
+header p {
+  padding: 3px;
+}
+
+header h1,
+footer h3,
+.diskette-graphic h4,
+.on-off-button {
+  padding: 10px;
+  border: 2px solid rgb(86, 83, 83);
+  border-radius: 50%;
+
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgb(27, 38, 27);
+
+  color: rgb(178, 185, 168);
+  font-family: "Tektur";
+  font-weight: bold;
+}
+
+/* Will later add proper JS logic that will allow the button to turn the screen on and off */
+.on-off-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 3px;
+
+  border-radius: 5px;
+}
+
+.off-button {
+  height: 50px;
+  width: 50px;
+
+  border: 2px solid rgb(0, 0, 0);
+  border-right: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.off-button-on {
+  background-color: rgb(48, 44, 44);
+}
+
+.off-button-off {
+  box-shadow: 1px 0.4px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: rgb(32, 29, 29);
+}
+
+.on-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+
+  border: 2px solid rgb(0, 0, 0);
+  border-left: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.on-button-off {
+  background-color: rgb(106, 12, 12);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+/* Trying to simulate an on button light and it's electrical flickering */
+.on-button-light {
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+
+  background-color: rgba(235, 235, 79);
+  box-shadow: 0 0 15px 10px rgba(177, 255, 100, 0.8);
+
+  animation: flicker 0.1s infinite;
+}
+
+.on-button-light-on {
+  display: block;
+}
+
+.on-button-light-off {
+  display: none;
+}
+
+.on-button-on {
+  box-shadow: 1px 0.4px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: rgb(224, 20, 20);
+}

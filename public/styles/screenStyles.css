@@ -1,0 +1,214 @@
+/* Styling for the retro "screen" */
+
+main {
+  height: 100%;
+  width: 95%;
+
+  border-top: 5px solid rgb(52, 51, 51);
+  border-left: 5px solid rgb(52, 51, 51);
+  border-bottom: 5px solid rgb(69, 68, 68);
+  border-right: 5px solid rgb(69, 68, 68);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgb(1, 21, 11);
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: none;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+  border-radius: 20px;
+
+  background-color: rgb(5, 68, 37);
+  mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+  mask-size: 100% 2px;
+
+  font-family: "VT323";
+  font-size: x-large;
+  color: #2cfd2c;
+}
+
+.screen-on {
+  animation: screen-on ease 0.5s;
+}
+
+.screen-off {
+  animation: screen-off ease 0.5s;
+}
+
+.screen-flicker {
+  animation: flicker 0.05s alternate-reverse infinite;
+}
+
+.main-section h2 {
+  text-decoration: underline;
+}
+
+.main-section nav {
+  width: 50%;
+
+  padding: 10px 0px 10px 0px;
+}
+
+.main-section nav ul {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+main article,
+main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+
+  padding: 4px;
+}
+
+main article {
+  border: 2px dashed rgb(14, 201, 14);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main article p {
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 5px;
+  padding-right: 5px;
+
+  word-break: normal;
+}
+
+main article section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main article a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+main article a,
+main nav a {
+  display: block;
+  text-decoration: none;
+  padding: 4px;
+
+  border: 2px dashed rgb(168, 255, 37);
+  border-radius: 5px;
+
+  color: rgb(168, 255, 37);
+}
+
+main article a:hover,
+main nav a:hover {
+  background-color: rgb(14, 201, 14);
+  color: rgb(42, 65, 8);
+}
+
+main article a:active,
+main nav a:active {
+  background-color: rgb(11, 157, 11);
+  color: rgb(25, 39, 4);
+}
+
+main form {
+  height: 100%;
+}
+
+main form section {
+  display: flex;
+  flex-direction: column;
+}
+
+main form section label {
+  padding-bottom: 3px;
+}
+
+main form section input,
+main form section label {
+  align-self: center;
+}
+
+main form section input {
+  width: 15%;
+  padding: 2px;
+
+  background-color: rgb(1, 105, 1);
+  color: greenyellow;
+  font-family: "VT323", monospace;
+  font-size: x-large;
+}
+
+.text-area-section {
+  height: 100px;
+}
+
+textarea {
+  height: 100%;
+  width: 50%;
+  padding: 4px;
+  background-color: rgb(1, 105, 1);
+  color: greenyellow;
+  font-size: x-large;
+  font-family: "VT323", monospace;
+}
+
+.text-area-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form button {
+  align-self: center;
+  padding: 4px;
+  margin-bottom: 5px;
+  border: 2px dashed rgb(168, 255, 37);
+  border-radius: 5px;
+
+  background-color: rgb(5, 68, 37);
+
+  color: rgb(168, 255, 37);
+  font-family: "VT323", monospace;
+  font-size: large;
+
+  cursor: pointer;
+}
+
+.main-message-view-button {
+  margin-top: 5px;
+}
+
+.large-message-view * {
+  font-size: xx-large;
+}
+
+.large-message-view h2 {
+  font-size: xx-large;
+}
+
+hr {
+  border: 1px dashed greenyellow;
+}

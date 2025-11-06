@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/mainStyles.css" />
+    <link rel="stylesheet" href="/styles/headerStyles.css" />
+    <link rel="stylesheet" href="/styles/screenStyles.css" />
+    <link rel="stylesheet" href="/styles/footerStyles.css" />
+    <title>Message-View-Page</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <section class="main-section large-message-view">
+        <h2>Message Viewer</h2>
+        <nav>
+          <ul>
+            <% for (let i = 0; i< navLinks.length; i++) {%>
+            <li>
+              <a href="<%= navLinks[i].href %>">
+                <p><%= navLinks[i].text %></p>
+              </a>
+            </li>
+            <% } %>
+          </ul>
+        </nav>
+        <article class="message-view">
+          <p class="userName">User: <%=messageView.user %></p>
+          <p class="postedDate">Posted: <%=messageView.date %></p>
+          <hr />
+          <p>"<%=messageView.message %>"</p>
+        </article>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script type="text/javascript" src="/helpers/display.js"></script>
+  </body>
+</html>

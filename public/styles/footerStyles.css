@@ -1,0 +1,105 @@
+/* Styling for the footer or "case" of the computer simulation */
+
+footer {
+  margin-top: auto;
+}
+
+.diskette-graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 80px;
+  width: 320px;
+
+  border-radius: 5px;
+  border-left: 5px solid rgb(104, 104, 81);
+  border-top: 5px solid rgb(104, 104, 81);
+  border-right: 5px solid rgb(62, 62, 47);
+  border-bottom: 5px solid rgb(62, 62, 47);
+
+  background-color: rgb(205, 205, 158);
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.disk-drive-top,
+.disk-drive-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.disk-drive-bottom {
+  margin-bottom: 5px;
+}
+
+.leftside-disk,
+.rightside-disk {
+  width: 125px;
+  height: 10px;
+
+  border-left: 3px solid rgb(104, 104, 81);
+  border-top: 3px solid rgb(104, 104, 81);
+  border-right: 3px solid rgb(62, 62, 47);
+  border-bottom: 3px solid rgb(62, 62, 47);
+
+  background-color: black;
+}
+
+.middle-of-disk {
+  height: 15px;
+  width: 50px;
+
+  border: 1px solid black;
+  border-bottom: 5px solid rgb(78, 76, 76);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  background-color: gray;
+}
+
+.leftside-disk {
+  border-right: 3px solid black;
+}
+
+.rightside-disk {
+  border-left: 3px solid black;
+}
+
+.disk-drive-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+.disklight-right,
+.disklight-left {
+  margin-left: auto;
+  margin-right: 10%;
+  height: 10px;
+  width: 10px;
+
+  border: 1px solid black;
+  border-radius: 50%;
+
+  background-color: darkred;
+}
+
+.disklight-left {
+  animation: disk-light-flicker 2s infinite alternate-reverse;
+}
+.disklight-right {
+  animation: disk-light-flicker 5s infinite alternate;
+}
+
+.diskette-graphic h4 {
+  margin-left: 5px;
+  padding: 4px;
+
+  font-weight: 300;
+}

@@ -1,0 +1,520 @@
+/* Just a backup CSS containing the header, footer and screen styling in cause individual files did not work */
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  height: 25%;
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(14, 201, 14);
+  margin-block: 1em;
+  border-right: 3px solid rgb(5, 68, 37);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(5, 68, 37);
+  border: 2px solid rgb(14, 201, 14);
+  border-radius: 100vw;
+}
+
+::-webkit-file-upload-button {
+  background: rgb(11, 157, 11);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgb(244, 244, 190);
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100vw;
+  padding: 0.5rem;
+
+  background-color: rgb(244, 244, 190);
+
+  color: rgb(212, 179, 179);
+}
+
+header p {
+  padding: 3px;
+}
+
+header h1,
+footer h3,
+.diskette-graphic h4,
+.on-off-button {
+  padding: 10px;
+  border: 2px solid rgb(86, 83, 83);
+  border-radius: 50%;
+
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgb(27, 38, 27);
+
+  color: rgb(178, 185, 168);
+  font-family: "Tektur";
+  font-weight: bold;
+}
+
+.on-off-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 3px;
+
+  border-radius: 5px;
+}
+
+header .off-button {
+  height: 50px;
+  width: 50px;
+
+  border: 2px solid rgb(0, 0, 0);
+  border-right: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.off-button-on {
+  background-color: rgb(48, 44, 44);
+}
+
+.off-button-off {
+  box-shadow: 1px 0.4px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: rgb(32, 29, 29);
+}
+
+.on-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+
+  border: 2px solid rgb(0, 0, 0);
+  border-left: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.on-button-off {
+  background-color: rgb(106, 12, 12);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+.on-button-light {
+  display: block;
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+
+  background-color: rgba(235, 235, 79);
+
+  animation: flicker 0.1s infinite;
+
+  box-shadow: 0 0 15px 10px rgba(177, 255, 100, 0.8);
+}
+
+.on-button-light-on {
+  display: block;
+}
+
+.on-button-light-off {
+  display: none;
+}
+
+.on-button-on {
+  box-shadow: 1px 0.4px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: rgb(224, 20, 20);
+
+  /* animation: flicker 0.2s infinite; */
+}
+
+main {
+  /* max-height: 100vw; */
+  height: 100%;
+  width: 95%;
+
+  border-top: 5px solid rgb(52, 51, 51);
+  border-left: 5px solid rgb(52, 51, 51);
+  border-bottom: 5px solid rgb(69, 68, 68);
+  border-right: 5px solid rgb(69, 68, 68);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgb(1, 21, 11);
+}
+
+main .main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: none;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+  border-radius: 20px;
+
+  background-color: rgb(5, 68, 37);
+  mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+  mask-size: 100% 2px;
+
+  font-family: "VT323";
+  font-size: x-large;
+  color: #2cfd2c;
+  animation: flicker 0.05s alternate-reverse infinite;
+  opacity: 0;
+}
+
+/* .main-section-screen-on {
+  
+} */
+
+.main-section h2 {
+  text-decoration: underline;
+}
+
+main .main-section nav {
+  width: 50%;
+
+  padding: 10px 0px 10px 0px;
+}
+
+main .main-section nav ul {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+main article,
+main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+
+  padding: 4px;
+}
+
+main article p {
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 5px;
+  padding-right: 5px;
+
+  word-break: normal;
+}
+
+main article section {
+  display: flex;
+}
+
+main article a,
+main nav a {
+  display: block;
+  text-decoration: none;
+  padding: 4px;
+
+  border: 2px dashed rgb(168, 255, 37);
+  border-radius: 5px;
+
+  color: rgb(168, 255, 37);
+}
+
+main article a:hover,
+main nav a:hover {
+  background-color: rgb(14, 201, 14);
+  color: rgb(42, 65, 8);
+}
+
+main article a:active,
+main nav a:active {
+  background-color: rgb(11, 157, 11);
+  color: rgb(25, 39, 4);
+}
+
+main form {
+  height: 100%;
+}
+
+main form section {
+  display: flex;
+  flex-direction: column;
+}
+
+main form section label {
+  padding-bottom: 3px;
+}
+
+main form section input,
+main form section label {
+  align-self: center;
+}
+
+main form section input {
+  width: 15%;
+  padding: 2px;
+
+  background-color: rgb(1, 105, 1);
+  color: greenyellow;
+  font-family: "VT323", monospace;
+  font-size: x-large;
+}
+
+.text-area-section {
+  height: 100px;
+}
+
+main form section textarea {
+  height: 100%;
+  width: 50%;
+  padding: 4px;
+  background-color: rgb(1, 105, 1);
+  color: greenyellow;
+  font-size: x-large;
+  font-family: "VT323", monospace;
+}
+
+.text-area-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form button {
+  align-self: center;
+  padding: 4px;
+  margin-bottom: 5px;
+  border: 2px dashed rgb(168, 255, 37);
+  border-radius: 5px;
+
+  background-color: rgb(5, 68, 37);
+
+  color: rgb(168, 255, 37);
+  font-family: "VT323", monospace;
+  font-size: large;
+
+  cursor: pointer;
+}
+
+.main-message-view-button {
+  margin-top: 5px;
+}
+
+.large-message-view * {
+  font-size: xx-large;
+}
+
+.large-message-view h2 {
+  font-size: xx-large;
+}
+
+hr {
+  border: 1px dashed greenyellow;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer .diskette-graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 320px;
+
+  border-radius: 5px;
+  border-left: 5px solid rgb(104, 104, 81);
+  border-top: 5px solid rgb(104, 104, 81);
+  border-right: 5px solid rgb(62, 62, 47);
+  border-bottom: 5px solid rgb(62, 62, 47);
+
+  background-color: rgb(205, 205, 158);
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.disk-drive-top,
+.disk-drive-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.disk-drive-bottom {
+  margin-bottom: 5px;
+}
+
+.leftside-disk,
+.rightside-disk {
+  width: 125px;
+  height: 10px;
+
+  border-left: 3px solid rgb(104, 104, 81);
+  border-top: 3px solid rgb(104, 104, 81);
+  border-right: 3px solid rgb(62, 62, 47);
+  border-bottom: 3px solid rgb(62, 62, 47);
+
+  background-color: black;
+}
+
+.middle-of-disk {
+  height: 15px;
+  width: 50px;
+
+  border: 1px solid black;
+  border-bottom: 5px solid rgb(78, 76, 76);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  background-color: gray;
+}
+
+.leftside-disk {
+  border-right: 3px solid black;
+}
+
+.rightside-disk {
+  border-left: 3px solid black;
+}
+
+.disk-drive-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+@keyframes diskA-light-flicker {
+  0% {
+    background-color: #ff0000; /* Bright red */
+  }
+  50% {
+    background-color: #8b0000; /* Dark red */
+  }
+  100% {
+    background-color: #ff0000; /* Bright red */
+  }
+}
+
+@keyframes disk-light-flicker {
+  0% {
+    background-color: #ff0000; /* Bright red */
+  }
+  10% {
+    background-color: #8b0000; /* Dark red */
+  }
+  25% {
+    background-color: #ff0000; /* Bright red */
+  }
+  50% {
+    background-color: #8b0000; /* Dark red */
+  }
+  100% {
+    background-color: #ff0000; /* Bright red */
+  }
+  50% {
+    background-color: #8b0000; /* Dark red */
+  }
+  0% {
+    background-color: #ff0000; /* Bright red */
+  }
+  10% {
+    background-color: #8b0000; /* Dark red */
+  }
+  25% {
+    background-color: #ff0000; /* Bright red */
+  }
+  100% {
+    background-color: #ff0000; /* Bright red */
+  }
+}
+
+.disklight-right,
+.disklight-left {
+  margin-left: auto;
+  margin-right: 10%;
+  height: 10px;
+  width: 10px;
+
+  border: 1px solid black;
+  border-radius: 50%;
+
+  background-color: darkred;
+}
+
+.disklight-left {
+  animation: disk-light-flicker 2s infinite alternate-reverse;
+}
+.disklight-right {
+  animation: disk-light-flicker 5s infinite alternate;
+}
+
+.diskette-graphic h4 {
+  margin-left: 5px;
+  padding: 4px;
+
+  font-weight: 300;
+}

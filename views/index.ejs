@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="/styles/mainStyles.css" />
+    <link rel="stylesheet" href="/styles/headerStyles.css" />
+    <link rel="stylesheet" href="/styles/screenStyles.css" />
+    <link rel="stylesheet" href="/styles/footerStyles.css" />
+    <title>Heldrin's-Message-Board</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <section class="main-section">
+        <h2>Heldrin's Message Board</h2>
+
+        <nav>
+          <ul>
+            <% for (let i = 0; i< navLinks.length; i++) {%>
+            <li>
+              <a href="<%= navLinks[i].href %>">
+                <p><%= navLinks[i].text %></p>
+              </a>
+            </li>
+            <% } %>
+          </ul>
+        </nav>
+        <% messageDB.forEach((message) => {%> <% const encodedMessage =
+        encodeURIComponent(JSON.stringify(message)) %>
+        <article>
+          <section>
+            <p class="userName">User: <%=message.user %></p>
+            <a
+              href="/messagePage?data=<%= encodedMessage %>"
+              class="main-message-view-button"
+              >View</a
+            >
+          </section>
+          <hr />
+          <p class="postedDate">Posted: <%=message.date %></p>
+          <hr />
+          <p class="">"<%=message.message %>"</p>
+        </article>
+        <%}); %>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script type="text/javascript" src="/helpers/display.js"></script>
+  </body>
+</html>
