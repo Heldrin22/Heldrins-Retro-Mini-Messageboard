@@ -22,7 +22,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Localhost Port
-PORT = 3000;
+PORT = 8000;
 
 const navLinks = [
   { href: "/", text: "Message Board" },
