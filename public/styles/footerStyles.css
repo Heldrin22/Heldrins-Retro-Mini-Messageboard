@@ -118,6 +118,8 @@ footer {
 @media (max-width: 800px) {
   footer {
     height: 55px;
+    align-items: center;
+    justify-content: center;
   }
   .diskette-graphic {
     transform: scale(0.65);
