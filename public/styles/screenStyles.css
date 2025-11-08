@@ -200,6 +200,11 @@ form button {
   cursor: pointer;
 }
 
+form button:hover {
+  background-color: rgb(14, 201, 14);
+  color: rgb(42, 65, 8);
+}
+
 .main-message-view-button {
   margin-top: 5px;
 }
