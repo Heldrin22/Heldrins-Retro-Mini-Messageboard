@@ -1,8 +1,11 @@
 /* Styling for the retro "screen" */
 
 main {
-  height: 100%;
+  flex-grow: 1;
+  height: 80%;
   width: 95%;
+
+  overflow-x: hidden;
 
   border-top: 5px solid rgb(52, 51, 51);
   border-left: 5px solid rgb(52, 51, 51);
@@ -151,7 +154,7 @@ main form section label {
 }
 
 main form section input {
-  width: 15%;
+  width: 100px;
   padding: 2px;
 
   background-color: rgb(1, 105, 1);
@@ -165,8 +168,8 @@ main form section input {
 }
 
 textarea {
-  height: 100%;
-  width: 50%;
+  height: 250px;
+  width: 350px;
   padding: 4px;
   background-color: rgb(1, 105, 1);
   color: greenyellow;
@@ -211,4 +214,19 @@ form button {
 
 hr {
   border: 1px dashed greenyellow;
+}
+
+@media (max-width: 800px) {
+  .main-section * {
+    font-size: transform(0.9);
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  input {
+    width: 50px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }

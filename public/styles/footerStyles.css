@@ -1,7 +1,18 @@
 /* Styling for the footer or "case" of the computer simulation */
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
   margin-top: auto;
+
+  width: 100vw;
+  padding: 0.5rem;
+
+  background-color: rgb(244, 244, 190);
+
+  color: rgb(212, 179, 179);
 }
 
 .diskette-graphic {
@@ -28,7 +39,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: space-between;
+  align-items: center;
 }
 
 .disk-drive-bottom {
@@ -102,4 +113,37 @@ footer {
   padding: 4px;
 
   font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  footer {
+    height: 55px;
+  }
+  .diskette-graphic {
+    transform: scale(0.65);
+  }
+  button {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  footer {
+    margin-top: -30px;
+    flex-direction: column;
+  }
+  .diskette-graphic {
+    scale: 0.7;
+  }
+  textarea {
+    width: 300px;
+  }
+  button {
+    margin-bottom: 5px;
+    transform: scale(1.5);
+  }
+  h3,
+  .right-disk {
+    display: none;
+  }
 }
