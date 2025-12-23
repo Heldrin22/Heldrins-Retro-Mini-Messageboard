@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 app.use("/", mainrouter);
 
 // Localhost Port
-PORT = 8000;
+PORT = 10000;
 
 app.listen(PORT, (error) => {
   if (error) {
@@ -26,3 +26,4 @@ app.listen(PORT, (error) => {
   }
   console.log("Listening on port: " + PORT + "\nhttp://localhost:" + PORT);
 });
+
