@@ -42,10 +42,10 @@
           </ul>
         </nav>
         <% messageDB.forEach((message) => {%> <% const encodedMessage =
-        encodeURIComponent(JSON.stringify(message)) %>
+        encodeURIComponent(JSON.stringify(message.message)) %>
         <article>
           <section>
-            <p class="userName">User: <%=message.user %></p>
+            <p class="userName">User: <%=message.username %></p>
             <a
               href="/messagePage?data=<%= encodedMessage %>"
               class="main-message-view-button"
