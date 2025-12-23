@@ -19,14 +19,14 @@ app.use("/", mainrouter);
 
 // Localhost Port
 PORT = process.env.PORT;
-HOST = process.env.HOST;
 
-app.listen(PORT, HOST, (error) => {
+app.listen(PORT, (error) => {
   if (error) {
     throw error;
   }
   console.log("Listening on port: " + PORT);
 });
+
 
 
 
