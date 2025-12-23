@@ -18,14 +18,16 @@ app.set("view engine", "ejs");
 app.use("/", mainrouter);
 
 // Localhost Port
-PORT = 10000 || 4000;
+PORT = process.env.PORT;
+HOST = process.env.HOST;
 
-app.listen(PORT, (error) => {
+app.listen(PORT, HOST, (error) => {
   if (error) {
     throw error;
   }
   console.log("Listening on port: " + PORT);
 });
+
 
 
 
